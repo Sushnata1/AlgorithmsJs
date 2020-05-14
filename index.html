@@ -1,9 +1,52 @@
 <html>
-<head></head>
-<body>
-    hello
+    <h1>hello</h1>hello world
+    
+    <input type="text" 
+    id="t1" 
+    value="me">
+    
+    <input type="button"
+    value="greet"
+    onclick="hello()">
+    <h1>lets do some math</h1>
+    
+    enter x
+    
+    <input type="number"
+    id='x'><br />
+    
+    enter fx
+    
+    <input type="text" 
+    id='fx'>
+    
+    <input type="button"
+    value="calculate"
+    onclick="func()"/>
+    <h3 id='ans'>value of f(x)</h3>
     <script>
-        document.insertAdjacentHTML("beforeend","world");
+       a = document.getElementById("t1")
+       y=a.value
+        console.log("&")
+        function hello() {
+          a=document.getElementById('t1')
+          y=a.value
+          console.log(y)
+          document.body.insertAdjacentHTML('beforeend','hello '+y+"<br>")
+        }
+        function func()
+        {
+          a = document.getElementById('x')
+          x = parseFloat(a.value)
+          console.log(x)
+          a = document.getElementById('fx')
+          let f = a.value
+          console.log(f)
+          fx=eval(f)
+          a=document.getElementById('ans')
+          let ans='f('+x+') = '+fx
+          a.innerHTML=ans
+        }
     </script>
-</body>
+    
 </html>
